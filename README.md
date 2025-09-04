@@ -1,6 +1,6 @@
-#🚀 Azure VM Deployment using Terraform (Parent-Child Modules & for_each)
+🚀**Azure VM Deployment using Terraform (Parent-Child Modules & for_each)**
 
-📄 Project Overview
+📄 #Project Overview#
 
 This project demonstrates a modular approach to deploying an Azure Virtual Machine (VM) along with all its dependencies using Terraform.
 It uses parent-child modules and the for_each construct to manage multiple resources efficiently.
