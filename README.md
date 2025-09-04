@@ -25,6 +25,9 @@ SQL Server & Database
 Virtual Machine (VM)
 
 Architecture Diagram
+
+
+
           ┌───────────────────┐
           │   Parent Module   │
           │------------------│
@@ -48,6 +51,8 @@ Architecture Diagram
           │ Virtual Machine   │
           └───────────────────┘
 
+          
+
 Project Structure
 Module Type	Module Name	Description
 Parent Module	parent-module	Coordinates deployment & passes variables
@@ -61,6 +66,8 @@ Child Module	keyvault	Creates Key Vault & stores secrets
 Child Module	sql-server	Creates SQL Server
 Child Module	sql-database	Creates SQL Database
 Child Module	virtual-machine	Creates VM with NIC, Public IP & NSG
+
+
 Key Concepts Implemented
 
 Parent-Child Module Architecture
