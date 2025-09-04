@@ -1,31 +1,32 @@
-Azure VM Deployment using Terraform (Parent-Child Modules & for_each)
-Project Overview
+🚀 Azure VM Deployment using Terraform (Parent-Child Modules & for_each)
+
+📄 Project Overview
 
 This project demonstrates a modular approach to deploying an Azure Virtual Machine (VM) along with all its dependencies using Terraform.
-It uses parent-child modules and the for_each construct to manage multiple resources efficiently. All configurations are hardcoded in the parent module's terraform.tfvars, while child modules handle individual resource creation.
+It uses parent-child modules and the for_each construct to manage multiple resources efficiently.
+All configurations are hardcoded in the parent module's terraform.tfvars, while child modules handle individual resource creation.
 
-Resources deployed:
+🛠️ Resources Deployed
 
-Resource Group (RG)
+Resource Group (RG) 🗂️
 
-Virtual Network (VNet)
+Virtual Network (VNet) 🌐
 
-Subnet
+Subnet 🔗
 
-Network Security Group (NSG)
+Network Security Group (NSG) 🔒
 
-Network Interface (NIC)
+Network Interface (NIC) 💻
 
-Public IP
+Public IP 🌍
 
-Azure Key Vault (with secrets)
+Azure Key Vault (with secrets) 🔑
 
-SQL Server & Database
+SQL Server & Database 🗄️
 
-Virtual Machine (VM)
+Virtual Machine (VM) 🖥️
 
-Architecture Diagram
-
+🏗️ Architecture Diagram
 
 
           ┌───────────────────┐
@@ -39,21 +40,20 @@ Architecture Diagram
           ┌────────┴──────────┐
           │   Child Modules   │
           │------------------│
-          │ Resource Group    │
-          │ VNet              │
-          │ Subnet            │
-          │ NSG               │
-          │ NIC               │
-          │ Public IP         │
-          │ Key Vault         │
-          │ SQL Server        │
-          │ SQL Database      │
-          │ Virtual Machine   │
+          │ Resource Group    │ 🗂️
+          │ VNet              │ 🌐
+          │ Subnet            │ 🔗
+          │ NSG               │ 🔒
+          │ NIC               │ 💻
+          │ Public IP         │ 🌍
+          │ Key Vault         │ 🔑
+          │ SQL Server        │ 🗄️
+          │ SQL Database      │ 🗄️
+          │ Virtual Machine   │ 🖥️
           └───────────────────┘
 
-          
+📁 Project Structure
 
-Project Structure
 Module Type	Module Name	Description
 Parent Module	parent-module	Coordinates deployment & passes variables
 Child Module	resource-group	Creates Azure Resource Group
@@ -67,36 +67,35 @@ Child Module	sql-server	Creates SQL Server
 Child Module	sql-database	Creates SQL Database
 Child Module	virtual-machine	Creates VM with NIC, Public IP & NSG
 
+💡 Key Concepts Implemented
 
-Key Concepts Implemented
-
-Parent-Child Module Architecture
+1️⃣ Parent-Child Module Architecture
 
 Parent module manages variable passing and orchestration.
 
-Child modules handle creation of individual resources for modularity and reusability.
+Child modules handle creation of individual resources for modularity & reusability.
 
-for_each Usage
+2️⃣ for_each Usage
 
-Dynamically deploy multiple resources (NSG rules, VM extensions, Key Vault secrets).
+Dynamically deploy multiple resources (e.g., NSG rules, VM extensions, Key Vault secrets).
 
-Secrets Management
+3️⃣ Secrets Management
 
 Azure Key Vault stores SQL credentials securely.
 
-No sensitive data is hardcoded in Terraform scripts.
+No sensitive data is hardcoded in Terraform scripts. 🔒
 
-Dependency Management
+4️⃣ Dependency Management
 
 depends_on ensures proper creation order (e.g., VM depends on NIC → Subnet & NSG).
 
-Clean Architecture
+5️⃣ Clean Architecture
 
 Each resource in its own module.
 
 Easy to scale or modify without affecting other modules.
 
-How to Use
+⚡ How to Use
 
 Clone the repository:
 
@@ -118,16 +117,16 @@ Destroy resources when done:
 
 terraform destroy
 
-Outcome
+✅ Outcome
 
-After applying this configuration, the following are provisioned in Azure:
+After applying this configuration, you get:
 
-Fully functional VM with attached NIC, Public IP, and NSG
+Fully functional VM with attached NIC, Public IP, and NSG 🖥️
 
-SQL Server & Database with credentials stored securely in Key Vault
+SQL Server & Database with credentials stored securely in Key Vault 🔑
 
-Modular infrastructure ready for scaling and reuse
+Modular infrastructure ready for scaling and reuse 🚀
 
-Author
+✍️ Author
 
-Sheetal Srivastava – Terraform & Azure enthusiast | DevOps practitioner
+Sheetal Srivastava – Terraform & Azure enthusiast | DevOps practitioner 🌟
