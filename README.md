@@ -1,10 +1,10 @@
 🚀**Azure VM Deployment using Terraform (Parent-Child Modules & for_each)**
 
-📄 #Project Overview#
+📄 *Project Overview*
 
-This project demonstrates a modular approach to deploying an Azure Virtual Machine (VM) along with all its dependencies using Terraform.
-It uses parent-child modules and the for_each construct to manage multiple resources efficiently.
-All configurations are hardcoded in the parent module's terraform.tfvars, while child modules handle individual resource creation.
+This project demonstrates a **modular approach** to deploying an **Azure Virtual Machine (VM)** along with all its dependencies using **Terraform.**
+It uses **parent-child modules** and the **for_each** construct to manage multiple **resources** efficiently.
+All configurations are hardcoded in the **parent module's terraform.tfvars**, while child modules handle individual resource creation.
 
 🛠️ Resources Deployed
 
@@ -26,7 +26,7 @@ SQL Server & Database 🗄️
 
 Virtual Machine (VM) 🖥️
 
-🏗️ Architecture Diagram
+🏗️**Architecture Diagram**
 
 
           ┌───────────────────┐
@@ -52,7 +52,7 @@ Virtual Machine (VM) 🖥️
           │ Virtual Machine   │ 🖥️
           └───────────────────┘
 
-📁 Project Structure
+📁 **Project Structure**
 
 Module Type	Module Name	Description
 Parent Module	parent-module	Coordinates deployment & passes variables
@@ -67,7 +67,7 @@ Child Module	sql-server	Creates SQL Server
 Child Module	sql-database	Creates SQL Database
 Child Module	virtual-machine	Creates VM with NIC, Public IP & NSG
 
-💡 Key Concepts Implemented
+💡 **Key Concepts Implemented**
 
 1️⃣ Parent-Child Module Architecture
 
@@ -95,7 +95,7 @@ Each resource in its own module.
 
 Easy to scale or modify without affecting other modules.
 
-⚡ How to Use
+⚡ **How to Use**
 
 Clone the repository:
 
@@ -117,7 +117,7 @@ Destroy resources when done:
 
 terraform destroy
 
-✅ Outcome
+✅ **Outcome**
 
 After applying this configuration, you get:
 
@@ -127,6 +127,6 @@ SQL Server & Database with credentials stored securely in Key Vault 🔑
 
 Modular infrastructure ready for scaling and reuse 🚀
 
-✍️ Author
+✍️ **Author**
 
-Sheetal Srivastava – Terraform & Azure enthusiast | DevOps practitioner 🌟
+**Sheetal Srivastava – Terraform & Azure enthusiast | DevOps practitioner8** 🌟
